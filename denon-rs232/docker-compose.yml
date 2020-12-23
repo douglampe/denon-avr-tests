@@ -1,0 +1,10 @@
+version: '2'
+services:
+  avr_test:
+    container_name: avr_test
+    image: avr_test:local
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+    privileged: true
+    group_add:
+      - dialout
